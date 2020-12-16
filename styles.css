@@ -7,4 +7,64 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+*,
+*:before,
+:after {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
 
+/* ~~~~~~~~~~~~~~ PAGE HEADER ~~~~~~~~~~~~~~~~ */
+.page-header {
+  background: #0fb9b1;;
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.controls > button {
+  background: white;
+  border: none;
+  border-radius: 5px;
+  color: purple;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+.controls > button:hover {
+  background: #e07999;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+/* ~~~~~~~~~~~~~~ HOME PAGE IMAGE ~~~~~~~~~~~~~~~~ */
+body,
+.friends-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.img-overlay-box {
+  font-size: 50px;
+  color: black;
+  height: 300px;
+  width: 300px;
+  border: 5px solid black;
+  float: left;
+  margin: 25px;
+}
+
+/* .img-overlay-box2 {
+  font-size: 50px;
+  color: red;
+  height: 300px;
+  width: 300px;
+  border: 5px solid black;
+  float: left;
+  margin: 50px;
+} */
