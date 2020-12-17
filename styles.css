@@ -36,7 +36,7 @@ span {
   color: #ee5253;
 }
 
-.radio-buttons {
+.radio-buttons-box {
   background-color: rgba(225, 225, 225, .9);
   font-size: 16px;
   color: black;
@@ -51,7 +51,24 @@ span {
   display: block;
   line-height: 225%;
   display: table-cell;
-  -webkit-appearance: radio;
+}
+
+/* .submit-button {
+  background-color: #0fb9b1;;
+} */
+
+.lets-cook-button {
+  background-color: #0fb9b1;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  padding: 6px 38px;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+  margin: 5%;
 }
 
 .img-overlay-box {
@@ -65,17 +82,23 @@ span {
   margin-right: 10%;
   float: left;
   opacity: .95;
+  object-fit: scale-down;
+  /* display: none */
 }
 
-/* .img-overlay-box2 {
-  font-size: 50px;
-  color: red;
-  height: 300px;
-  width: 300px;
-  border: 5px solid black;
+.img-overlay-box2 {
+  background-color: rgba(225, 225, 225, .9);
+  font-size: 24px;
+  color: black;
+  height: 50%;
+  width: 30%;
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
   float: left;
-  margin: 50px;
-} */
+  opacity: .95;
+  display: none
+}
 
 /* ~~~~~~~~~~~~~~ PAGE HEADER ~~~~~~~~~~~~~~~~ */
 .page-header {
@@ -108,7 +131,6 @@ span {
   /* position: relative; */
   border: none;
   border-radius: 5px;
-
 }
 
 .controls > button:hover {
