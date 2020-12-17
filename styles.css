@@ -14,49 +14,57 @@ red - #ee5253
   font-family: 'Roboto', sans-serif;
 }
 
-/* ~~~~~~~~~~~~~~ PAGE HEADER ~~~~~~~~~~~~~~~~ */
-.page-header {
-  background: #0fb9b1;;
-  display: flex;
-  justify-content: center;
-  padding: 25px 0;
-  font-family: 'Roboto', sans-serif;
-}
-
-.controls > button {
-  background: white;
-  border: none;
-  border-radius: 5px;
-  color: purple;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  margin: 10px;
-  padding: 10px 20px;
-}
-
-.controls > button:hover {
-  background: #e07999;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-}
-
 /* ~~~~~~~~~~~~~~ HOME PAGE IMAGE ~~~~~~~~~~~~~~~~ */
-body,
-.friends-image {
-  object-fit: cover;
+body {
+  background-image: url("./assets/burger-friends.jpg");
+  background-size: cover;
   height: 100%;
   width: 100%;
   margin: 0;
 }
 
-.img-overlay-box {
-  font-size: 50px;
+.what-title {
+  background-color: rgba(225, 225, 225, .9);
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 150%;
+  opacity: 0.95;
+  padding-top: 10%;
+}
+
+span {
+  color: #ee5253;
+}
+
+.radio-buttons {
+  background-color: rgba(225, 225, 225, .9);
+  font-size: 16px;
   color: black;
-  height: 300px;
-  width: 300px;
-  border: 5px solid black;
+  height: 50%;
+  width: 30%;
+  padding-left: 3%;
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
   float: left;
-  margin: 25px;
+  opacity: 0.95;
+  display: block;
+  line-height: 225%;
+  display: table-cell;
+  -webkit-appearance: radio;
+}
+
+.img-overlay-box {
+  background-color: rgba(225, 225, 225, .9);
+  font-size: 24px;
+  color: black;
+  height: 50%;
+  width: 30%;
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  float: left;
+  opacity: .95;
 }
 
 /* .img-overlay-box2 {
@@ -67,4 +75,53 @@ body,
   border: 5px solid black;
   float: left;
   margin: 50px;
+} */
+
+/* ~~~~~~~~~~~~~~ PAGE HEADER ~~~~~~~~~~~~~~~~ */
+.page-header {
+  background: #0fb9b1;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 0;
+
+  position: relative;
+}
+
+.page-header-title {
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  margin: 10px;
+  padding: 10px 20px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+.add-recipe-button {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  margin: 10px;
+  padding: 4px 8px;
+  /* position: relative; */
+  border: none;
+  border-radius: 5px;
+
+}
+
+.controls > button:hover {
+  background: #e07999;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+
+/* body,
+.friends-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  margin: 0;
 } */

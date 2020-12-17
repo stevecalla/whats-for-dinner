@@ -10,11 +10,34 @@
     </section>
     <section class="view home-page">
       <section class="home-page">
-        <p class="img-overlay-box">Box1</p>
-        <p class="img-overlay-box">Box2</p>
-        <img class="friends-image" src="./assets/burger-friends.jpg" alt="image of friends eating">
+          <form class="radio-buttons">
+              <p class="what-title">What are you looking for?<span>*</span></p>
+              <div>
+                <input type="radio" id="sideChoice"
+                 name="contact" value="email">
+                <label for="contactChoice1">Side</label><br>
+
+                <input type="radio" id="mainDishChoice"
+                 name="contact" value="phone">
+                <label for="contactChoice2">Main Dish</label><br>
+
+                <input type="radio" id="DessertChoice"
+                 name="contact" value="mail">
+                <label for="contactChoice3">Dessert</label><br>
+
+                <input type="radio" id="DessertChoice"
+                 name="contact" value="mail">
+                <label for="contactChoice3">Entire Meal</label>
+              </div>
+              <div>
+                <button type="submit">Submit</button>
+              </div>
+          </form>
+        <img class="img-overlay-box" src="./assets/cookpot.svg">
       </section>
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
+
+<!-- <img class="friends-image" src="./assets/burger-friends.jpg" alt="Image of friends eating"> --
