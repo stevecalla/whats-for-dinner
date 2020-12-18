@@ -1,10 +1,11 @@
 //Create variables targetting the relevant DOM elements here 👇
 var letsCookButton = document.querySelector('.lets-cook-button');
-var showRandomRecommendation = document.querySelector('.recommendedMeal');
+var showRandomRecommendation = document.querySelector('.recommended-meal');
 var selectSideRadioButton = document.querySelector('#selectSide');
 var selectMainRadioButton = document.querySelector('#selectMainDish');
 var selectDessertRadioButton = document.querySelector('#selectDessert');
 var selectEntireMealRadioButton = document.querySelector('#selectEntireMeal');
+var clearRecommendButton = document.querySelector('.clear-recommend-button');
 
 // Add your event listeners here :point_👇
 letsCookButton.addEventListener('click', randomSideMainDessert);
@@ -12,6 +13,7 @@ selectSideRadioButton.addEventListener('click', setChoice);
 selectMainRadioButton.addEventListener('click', setChoice);
 selectDessertRadioButton.addEventListener('click', setChoice);
 selectEntireMealRadioButton.addEventListener('click', setChoice);
+clearRecommendButton.addEventListener('click', displayCookingPot);
 console.log('a = ', selectSideRadioButton.value);
 console.log('b = ', selectMainRadioButton.value);
 
@@ -29,7 +31,7 @@ function setChoice() {
 
 function randomSideMainDessert() {
   event.preventDefault();
-  showRandomRecommendation.innerText = sideList[randomSide()];
+  showRandomRecommendation.innerText = `${sideList[randomSide()]}!`;
   hideCookingPot();
   displayMealChoice();
 };
@@ -45,6 +47,12 @@ function hideCookingPot() {
 function displayMealChoice() {
   document.querySelector('.img-overlay-box2').style.display = 'inline';
 };
+
+function displayCookingPot() {
+    event.preventDefault();
+    document.querySelector('.img-overlay-box').style.display = 'inline';
+    document.querySelector('.img-overlay-box2').style.display = 'none';
+}
 
 // Add variables here :point_down:👇
 var sideList = [
