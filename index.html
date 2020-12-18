@@ -13,31 +13,41 @@
           <form class="radio-buttons-box">
               <p class="what-title">What are you looking for?<sup>*</sup></p>
               <div>
-                <input type="radio" id="sideChoice"
-                 name="contact" value="email">
-                <label for="contactChoice1">Side</label><br>
+                <input type="radio" id="selectSide"
+                 name="choice" value="sideChoice">
+                <label for="sideChoice">Side</label><br>
 
-                <input type="radio" id="mainDishChoice"
-                 name="contact" value="phone">
-                <label for="contactChoice2">Main Dish</label><br>
+                <input type="radio" id="selectMainDish"
+                 name="choice" value="mainChoice">
+                <label for="mainChoice">Main Dish</label><br>
 
-                <input type="radio" id="DessertChoice"
-                 name="contact" value="mail">
-                <label for="contactChoice3">Dessert</label><br>
+                <input type="radio" id="selectDessert"
+                 name="choice" value="dessertChoice">
+                <label for="dessertChoice">Dessert</label><br>
 
-                <input type="radio" id="DessertChoice"
-                 name="contact" value="mail">
-                <label for="contactChoice3">Entire Meal</label>
+                <input type="radio" id="selectEntireMeal"
+                 name="choice" value="entireMeal">
+                <label for="entireMealChoice">Entire Meal</label>
               </div>
               <div>
-                <!-- <button type="submit hidden">Submit</button> -->
-                <button class="lets-cook-button hidden">LET'S COOK!</button>
+                <button class="lets-cook-button">LET'S COOK!</button>
               </div>
           </form>
-        <img class="img-overlay-box" src="./assets/cookpot.svg">
-        <p class="img-overlay-box2">Hello</p>;
       </section>
-    </section>
+      <section>
+        <form>
+          <img class="img-overlay-box" src="./assets/cookpot.svg">
+        </form>
+      </section>
+      <section class="home-page">
+          <form class="img-overlay-box2">
+              <p class="titleText">You should make:</p>
+              <p class="recommendedMeal">text2</p>
+              <div>
+                <button class="lets-cook-button">LET'S COOK!</button>
+              </div>
+          </form>
+      </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

@@ -72,6 +72,7 @@ sup {
   width: 50%;
   border: none;
   border-radius: 5px;
+  /* display: none; */
 }
 
 .img-overlay-box {
@@ -87,7 +88,7 @@ sup {
   opacity: .95;
   object-fit: scale-down;
   padding-left: 0;
-  /* display: none */
+  /* display: none; */
 }
 
 .img-overlay-box2 {
@@ -100,11 +101,30 @@ sup {
   margin-left: 0%;
   margin-right: 3%;
   float: left;
+  opacity: 0.95;
+  display: block;
+  line-height: 225%;
+  padding-left: 0;
+  display: none;
+}
+
+/* .img-overlay-box2 {
+  background-color: rgba(225, 225, 225, .9);
+  font-size: 24px;
+  text-align: center;
+  color: black;
+  height: 50%;
+  width: 35%;
+  margin-top: 50px;
+  margin-left: 0%;
+  margin-right: 3%;
+  float: left;
   opacity: .95;
   object-fit: scale-down;
   padding-left: 0;
-  display: none
-}
+} */
+
+
 
 /* ~~~~~~~~~~~~~~ PAGE HEADER ~~~~~~~~~~~~~~~~ */
 .page-header {
