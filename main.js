@@ -16,42 +16,55 @@ selectEntireMealButton.addEventListener('click', setChoice);
 clearRecommendButton.addEventListener('click', displayCookingPot);
 
 // Create your event handlers and other functions here :point_down:👇
+function randomSideIndex() {
+  return Math.floor(Math.random() * sideList.length);
+};
+function randomMainsIndex() {
+  return Math.floor(Math.random() * sideList.length);
+};
+function randomDessertIndex() {
+  return Math.floor(Math.random() * sideList.length);
+};
 function setChoice() {
   if (selectSideButton.checked) {
-    return `${sideList[randomSide()]}!`;
+    return `${sideList[randomSideIndex()]}!`;
   } else if (selectMainsButton.checked) {
-    return `${mainsList[randomSide()]}!`;
+    return `${mainsList[randomMainsIndex()]}!`;
   } else if (selectDessertButton.checked) {
-    return `${dessertList[randomSide()]}!`;
+    return `${dessertList[randomDessertIndex()]}!`;
   } else if (selectEntireMealButton.checked) {
-    return `${mainsList[randomSide()]} with a side of
-    ${sideList[randomSide()]} and ${dessertList[randomSide()]} for dessert`;
+    return `${mainsList[randomMainsIndex()]} with a side of
+    ${sideList[randomSideIndex()]} and ${dessertList[randomDessertIndex()]} for dessert`;
   } else {
     return "Select Meal Choice!"
   };
 };
-
 function displaySideMainsDessert() {
   event.preventDefault();
   if (setChoice() === "Select Meal Choice!") {
-    document.querySelector('.recommended-meal').style.fontSize = '40px';
-    document.querySelector('.recommended-meal').style.color = 'red';
+    setDisplayStyle();
     showRandomRecommendation.innerText = setChoice();
   } else if (selectEntireMealButton.checked) {
-    document.querySelector('.recommended-meal').style.fontSize = '24px';
-    document.querySelector('.recommended-meal').style.color = 'black';
+    setDisplayStyle();
     showRandomRecommendation.innerText = setChoice();
   } else {
-    document.querySelector('.recommended-meal').style.fontSize = '40px';
-    document.querySelector('.recommended-meal').style.color = 'black';
+    setDisplayStyle();
     showRandomRecommendation.innerText = setChoice();
-  };  ;
+  };
   hideCookingPot();
 };
-
-function randomSide() {
-  return Math.floor(Math.random() * sideList.length);
-};
+function setDisplayStyle() {
+    if (setChoice() === "Select Meal Choice!") {
+      document.querySelector('.recommended-meal').style.fontSize = '40px';
+      document.querySelector('.recommended-meal').style.color = 'red';
+    } else if (selectEntireMealButton.checked) {
+      document.querySelector('.recommended-meal').style.fontSize = '24px';
+      document.querySelector('.recommended-meal').style.color = 'black';
+    } else {
+      document.querySelector('.recommended-meal').style.fontSize = '40px';
+      document.querySelector('.recommended-meal').style.color = 'black';
+    };
+  };
 function hideCookingPot() {
   document.querySelector('.img-overlay-box').style.display = 'none';
   document.querySelector('.img-overlay-box2').style.display = 'inline';
