@@ -2,7 +2,7 @@
 
 COLORS
 teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
+frosted white - rgba(225, 225, 225, .9); #CBCBCB
 grey - #95a5a6;
 red - #ee5253
 
@@ -24,21 +24,23 @@ body {
 }
 
 .what-title {
-  background-color: rgba(225, 225, 225, .9);
+  background-color: #DDDDDD;
   font-size: 32px;
   font-weight: bold;
   line-height: 150%;
-  opacity: 0.95;
+  opacity: 0.90;
   padding-top: 0%;
   margin-bottom: 3%;
 }
 
 sup {
   color: #ee5253;
+  font-weight: bolder;
+
 }
 
 .radio-buttons-box {
-  background-color: rgba(225, 225, 225, .9);
+  background-color: #DDDDDD;
   font-size: 22px;
   color: black;
   height: 50%;
@@ -48,7 +50,7 @@ sup {
   margin-left: 10%;
   margin-right: 12%;
   float: left;
-  opacity: 0.95;
+  opacity: 0.90;
   display: block;
   line-height: 225%;
   display: table-cell;
@@ -72,7 +74,7 @@ sup {
 }
 
 .img-overlay-box {
-  background-color: rgba(225, 225, 225, .9);
+  background-color: #DDDDDD;
   font-size: 24px;
   color: black;
   height: 50%;
@@ -81,14 +83,14 @@ sup {
   margin-left: 0%;
   margin-right: 3%;
   float: left;
-  opacity: .95;
+  opacity: .90;
   object-fit: scale-down;
   padding-left: 0;
   /* display: none; */
 }
 
 .img-overlay-box2 {
-  background-color: rgba(225, 225, 225, .9);
+  background-color: #DDDDDD;
   font-size: 24px;
   color: black;
   height: 50%;
@@ -97,7 +99,7 @@ sup {
   margin-left: 0%;
   margin-right: 3%;
   float: left;
-  opacity: 0.95;
+  opacity: 0.90;
   display: block;
   line-height: 225%;
   padding-left: 0;
@@ -105,23 +107,23 @@ sup {
 }
 
 .title-text {
-  background-color: rgba(225, 225, 225, .9);
+  background-color: #DDDDDD;
   font-size: 20px;
   font-weight: bolder;
   font-style: italic;
   line-height: 150%;
-  opacity: 0.95;
+  opacity: 0.90;
   padding-top: 25%;
   margin-bottom: -1%;
   text-align: center;
 }
 
 .recommended-meal {
-  background-color: rgba(225, 225, 225, .9);
+  background-color: #DDDDDD;
   font-size: 40px;
   font-weight: bold;
   line-height: 150%;
-  opacity: 0.95;
+  opacity: .90;
   padding-top: 0%;
   margin-top: -1%;
   margin-bottom: 3%;
@@ -143,6 +145,7 @@ sup {
   border: none;
   border-radius: 5px;
   bottom: 0px;
+  opacity: .99;
   /* display: none; */
 }
 

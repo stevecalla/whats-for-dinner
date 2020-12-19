@@ -1,58 +1,66 @@
 //Create variables targetting the relevant DOM elements here 👇
 var letsCookButton = document.querySelector('.lets-cook-button');
+var selectSideButton = document.querySelector('#selectSide');
+var selectMainsButton = document.querySelector('#selectMainDish');
+var selectDessertButton = document.querySelector('#selectDessert');
+var selectEntireMealButton = document.querySelector('#selectEntireMeal');
 var showRandomRecommendation = document.querySelector('.recommended-meal');
-var selectSideRadioButton = document.querySelector('#selectSide');
-var selectMainRadioButton = document.querySelector('#selectMainDish');
-var selectDessertRadioButton = document.querySelector('#selectDessert');
-var selectEntireMealRadioButton = document.querySelector('#selectEntireMeal');
 var clearRecommendButton = document.querySelector('.clear-recommend-button');
 
 // Add your event listeners here :point_👇
-letsCookButton.addEventListener('click', randomSideMainDessert);
-selectSideRadioButton.addEventListener('click', setChoice);
-selectMainRadioButton.addEventListener('click', setChoice);
-selectDessertRadioButton.addEventListener('click', setChoice);
-selectEntireMealRadioButton.addEventListener('click', setChoice);
+letsCookButton.addEventListener('click', displaySideMainsDessert);
+selectSideButton.addEventListener('click', setChoice);
+selectMainsButton.addEventListener('click', setChoice);
+selectDessertButton.addEventListener('click', setChoice);
+selectEntireMealButton.addEventListener('click', setChoice);
 clearRecommendButton.addEventListener('click', displayCookingPot);
-console.log('a = ', selectSideRadioButton.value);
-console.log('b = ', selectMainRadioButton.value);
 
 // Create your event handlers and other functions here :point_down:👇
 function setChoice() {
-  console.log('c = ', selectSideRadioButton.value);
-  console.log('d = ', selectMainRadioButton.value);
-  if (selectMainRadioButton.value === "mainChoice") {
-    console.log("main");
+  if (selectSideButton.checked) {
+    return `${sideList[randomSide()]}!`;
+  } else if (selectMainsButton.checked) {
+    return `${mainsList[randomSide()]}!`;
+  } else if (selectDessertButton.checked) {
+    return `${dessertList[randomSide()]}!`;
+  } else if (selectEntireMealButton.checked) {
+    return `${mainsList[randomSide()]} with a side of
+    ${sideList[randomSide()]} and ${dessertList[randomSide()]} for dessert`;
   } else {
-    console.log("side");
+    return "Select Meal Choice!"
   };
-  return selectSideRadioButton.value
 };
 
-function randomSideMainDessert() {
+function displaySideMainsDessert() {
   event.preventDefault();
-  showRandomRecommendation.innerText = `${sideList[randomSide()]}!`;
+  if (setChoice() === "Select Meal Choice!") {
+    document.querySelector('.recommended-meal').style.fontSize = '40px';
+    document.querySelector('.recommended-meal').style.color = 'red';
+    showRandomRecommendation.innerText = setChoice();
+  } else if (selectEntireMealButton.checked) {
+    document.querySelector('.recommended-meal').style.fontSize = '24px';
+    document.querySelector('.recommended-meal').style.color = 'black';
+    showRandomRecommendation.innerText = setChoice();
+  } else {
+    document.querySelector('.recommended-meal').style.fontSize = '40px';
+    document.querySelector('.recommended-meal').style.color = 'black';
+    showRandomRecommendation.innerText = setChoice();
+  };  ;
   hideCookingPot();
-  displayMealChoice();
 };
 
 function randomSide() {
   return Math.floor(Math.random() * sideList.length);
 };
-
 function hideCookingPot() {
   document.querySelector('.img-overlay-box').style.display = 'none';
-};
-
-function displayMealChoice() {
   document.querySelector('.img-overlay-box2').style.display = 'inline';
 };
-
 function displayCookingPot() {
     event.preventDefault();
     document.querySelector('.img-overlay-box').style.display = 'inline';
     document.querySelector('.img-overlay-box2').style.display = 'none';
-}
+};
 
 // Add variables here :point_down:👇
 var sideList = [
@@ -67,42 +75,37 @@ var sideList = [
   "Hush Puppies"
 ];
 
-// Mains
-// Spaghetti and Meatballs
-// Pineapple Chicken
-// Shakshuka
-// Thai Yellow Curry
-// Bibimbap
-// Chicken Parmesean
-// Butternut Squash Soup
-// BBQ Chicken Burgers
-// Ramen
-// Empanadas
-// Chicken Fried Rice
-// Sheet Pan Fajitas
-// Margarita Pizza
-//
-// Desserts
-// Apple Pie
-// Lemon Meringue Pie
-// Black Forest Cake
-// Banana Bread
-// Peach Cobbler
-// Cheesecake
-// Funfetti Cake
-// Baklava
-// Flan
-// Macarons
-// Macaroons
-// Chocolate Cupcakes
-// Pavlova
-// Pumpkin Pie
-// Key Lime Pie
-// Tart Tatin
-// Croissants
-// Eclairs
+var mainsList = [
+  "Spaghetti and Meatballs",
+  "Pineapple Chicken",
+  "Shakshuka",
+  "Thai Yellow Curry",
+  "Bibimbap",
+  "Chicken Parmesean",
+  "Butternut Squash Soup",
+  "BBQ Chicken Burgers",
+  "Ramen, Empanadas",
+  "Chicken Fried Rice",
+  "Sheet Pan Fajitas",
+  "Margarita Pizza"
+];
 
-// function randomeEntireMeal() {
-//   event.preventDefault();
-//   showRandomRecommendation.innerText = `${sideList[randomSide()]} with a side of ${sideList[randomSide()]} and ${sideList[randomSide()]} for dessert`;
-// };
+var dessertList = [
+  "Apple Pie",
+  "Lemon Meringue Pie",
+  "Black Forest Cake",
+  "Banana Bread",
+  "Peach Cobbler",
+  "Cheesecake",
+  "Funfetti Cake",
+  "Baklava",
+  "Flan",
+  "Macaroons",
+  "Chocolate Cupcakes",
+  "Pavlova",
+  "Pumpkin Pie",
+  "Key Lime Pie",
+  "Tart Tatin",
+  "Croissants",
+  "Eclairs"
+];
