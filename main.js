@@ -20,10 +20,10 @@ function randomSideIndex() {
   return Math.floor(Math.random() * sideList.length);
 };
 function randomMainsIndex() {
-  return Math.floor(Math.random() * sideList.length);
+  return Math.floor(Math.random() * mainsList.length);
 };
 function randomDessertIndex() {
-  return Math.floor(Math.random() * sideList.length);
+  return Math.floor(Math.random() * dessertList.length);
 };
 function setChoice() {
   if (selectSideButton.checked) {
@@ -33,8 +33,7 @@ function setChoice() {
   } else if (selectDessertButton.checked) {
     return `${dessertList[randomDessertIndex()]}!`;
   } else if (selectEntireMealButton.checked) {
-    return `${mainsList[randomMainsIndex()]} with a side of
-    ${sideList[randomSideIndex()]} and ${dessertList[randomDessertIndex()]} for dessert`;
+    return `${mainsList[randomMainsIndex()]} with a side of ${sideList[randomSideIndex()]} and ${dessertList[randomDessertIndex()]} for dessert`;
   } else {
     return "Select Meal Choice!"
   };
