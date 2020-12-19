@@ -16,15 +16,6 @@ selectEntireMealButton.addEventListener('click', setChoice);
 clearRecommendButton.addEventListener('click', displayCookingPot);
 
 // Create your event handlers and other functions here :point_down:👇
-function randomSideIndex() {
-  return Math.floor(Math.random() * sideList.length);
-};
-function randomMainsIndex() {
-  return Math.floor(Math.random() * mainsList.length);
-};
-function randomDessertIndex() {
-  return Math.floor(Math.random() * dessertList.length);
-};
 function setChoice() {
   if (selectSideButton.checked) {
     return `${sideList[randomSideIndex()]}!`;
@@ -41,29 +32,38 @@ function setChoice() {
 function displaySideMainsDessert() {
   event.preventDefault();
   if (setChoice() === "Select Meal Choice!") {
-    setDisplayStyle();
+    setLetsCookStyle();
     showRandomRecommendation.innerText = setChoice();
   } else if (selectEntireMealButton.checked) {
-    setDisplayStyle();
+    setMainsStyle();
     showRandomRecommendation.innerText = setChoice();
   } else {
-    setDisplayStyle();
+    setSideMainDessertStyle();
     showRandomRecommendation.innerText = setChoice();
   };
   hideCookingPot();
 };
-function setDisplayStyle() {
-    if (setChoice() === "Select Meal Choice!") {
+function randomSideIndex() {
+  return Math.floor(Math.random() * sideList.length);
+};
+function randomMainsIndex() {
+  return Math.floor(Math.random() * mainsList.length);
+};
+function randomDessertIndex() {
+  return Math.floor(Math.random() * dessertList.length);
+};
+function setLetsCookStyle() {
       document.querySelector('.recommended-meal').style.fontSize = '40px';
       document.querySelector('.recommended-meal').style.color = 'red';
-    } else if (selectEntireMealButton.checked) {
-      document.querySelector('.recommended-meal').style.fontSize = '24px';
-      document.querySelector('.recommended-meal').style.color = 'black';
-    } else {
-      document.querySelector('.recommended-meal').style.fontSize = '40px';
-      document.querySelector('.recommended-meal').style.color = 'black';
-    };
-  };
+};
+function setMainsStyle() {
+  document.querySelector('.recommended-meal').style.fontSize = '24px';
+  document.querySelector('.recommended-meal').style.color = 'black';
+};
+function setSideMainDessertStyle() {
+  document.querySelector('.recommended-meal').style.fontSize = '40px';
+  document.querySelector('.recommended-meal').style.color = 'black';
+};
 function hideCookingPot() {
   document.querySelector('.img-overlay-box').style.display = 'none';
   document.querySelector('.img-overlay-box2').style.display = 'inline';
