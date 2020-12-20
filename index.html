@@ -1,43 +1,39 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="page-header-title">What's for Dinner?</h2>
-      <button class="add-recipe-button">ADD A RECIPE</button>
+<head>
+  <title>&#129368 What's For Dinner? &#127860</title>
+  <!-- <title>What's For Dinner?</title> -->
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<section class="page-header">
+  <h1 class="page-header-title">What's for Dinner?</h2>
+    <button class="add-recipe-button">ADD A RECIPE</button>
+</section>
+<body>
+  <main class="wrapper">
+    <article class="radio-buttons-box">
+      <p class="what-title">What are you looking for?<sup>*</sup></p>
+      <form class="radio-buttons">
+          <input type="radio" id="selectSide" name="choice" value="sideChoice">
+          <label for="sideChoice">Side</label><br>
+          <input type="radio" id="selectMainDish" name="choice" value="mainChoice">
+          <label for="mainChoice">Main Dish</label><br>
+          <input type="radio" id="selectDessert" name="choice" value="dessertChoice">
+          <label for="dessertChoice">Dessert</label><br>
+          <input type="radio" id="selectEntireMeal" name="choice" value="entireMeal">
+          <label for="entireMealChoice">Entire Meal</label>
+      </form>
+      <button class="lets-cook-button">LET'S COOK!</button>
+    </article>
+    <article class="recommend-meal-box">
+      <p class="should-make-title-text">You should make:</p>
+      <p class="recommended-meal-text">Placeholder Text</p>
+      <button class="clear-recommend-button">CLEAR</button>
+    </article>
+    <section class="cookpot-box">
+      <img src="./assets/cookpot.svg">
     </section>
-    <section class="view home-page">
-      <section class="home-page">
-          <form class="radio-buttons">
-              <p class="what-title">What are you looking for?<span>*</span></p>
-              <div>
-                <input type="radio" id="sideChoice"
-                 name="contact" value="email">
-                <label for="contactChoice1">Side</label><br>
-
-                <input type="radio" id="mainDishChoice"
-                 name="contact" value="phone">
-                <label for="contactChoice2">Main Dish</label><br>
-
-                <input type="radio" id="DessertChoice"
-                 name="contact" value="mail">
-                <label for="contactChoice3">Dessert</label><br>
-
-                <input type="radio" id="DessertChoice"
-                 name="contact" value="mail">
-                <label for="contactChoice3">Entire Meal</label>
-              </div>
-              <div>
-                <button type="submit">Submit</button>
-              </div>
-          </form>
-        <img class="img-overlay-box" src="./assets/cookpot.svg">
-      </section>
-    </section>
-  </body>
-  <script type="text/javascript" src="main.js"></script>
+  </main>
+</body>
+<script type="text/javascript" src="main.js"></script>
 </html>
-
-<!-- <img class="friends-image" src="./assets/burger-friends.jpg" alt="Image of friends eating"> --

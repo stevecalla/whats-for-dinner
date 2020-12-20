@@ -1,16 +1,7 @@
-/* font-family: 'Roboto', sans-serif;
-
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
-
-*/
 *,
 *:before,
 :after {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   font-family: 'Roboto', sans-serif;
 }
 
@@ -23,68 +14,13 @@ body {
   margin: 0;
 }
 
-.what-title {
-  background-color: rgba(225, 225, 225, .9);
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 150%;
-  opacity: 0.95;
-  padding-top: 10%;
-}
-
-span {
-  color: #ee5253;
-}
-
-.radio-buttons {
-  background-color: rgba(225, 225, 225, .9);
-  font-size: 16px;
-  color: black;
-  height: 50%;
-  width: 30%;
-  padding-left: 3%;
-  margin-top: 50px;
-  margin-left: 10%;
-  margin-right: 10%;
-  float: left;
-  opacity: 0.95;
-  display: block;
-  line-height: 225%;
-  display: table-cell;
-  -webkit-appearance: radio;
-}
-
-.img-overlay-box {
-  background-color: rgba(225, 225, 225, .9);
-  font-size: 24px;
-  color: black;
-  height: 50%;
-  width: 30%;
-  margin-top: 50px;
-  margin-left: 10%;
-  margin-right: 10%;
-  float: left;
-  opacity: .95;
-}
-
-/* .img-overlay-box2 {
-  font-size: 50px;
-  color: red;
-  height: 300px;
-  width: 300px;
-  border: 5px solid black;
-  float: left;
-  margin: 50px;
-} */
-
 /* ~~~~~~~~~~~~~~ PAGE HEADER ~~~~~~~~~~~~~~~~ */
 .page-header {
   background: #0fb9b1;
   font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: flex-end;
-  padding: 5px 0;
-
+  padding: 10px 0;
   position: relative;
 }
 
@@ -95,7 +31,7 @@ span {
   margin: 10px;
   padding: 10px 20px;
   position: absolute;
-  top: -5px;
+  top: 0px;
   left: -5px;
 }
 
@@ -108,20 +44,177 @@ span {
   /* position: relative; */
   border: none;
   border-radius: 5px;
-
 }
 
-.controls > button:hover {
+.controls>button:hover {
   background: #e07999;
   font-family: 'Roboto', sans-serif;
   color: white;
 }
 
+/* ~~~~~~~~~~~~~~ RADIO BUTTON BOX ~~~~~~~~~~~~~~~~ */
+.wrapper {
+  display: flex;
+  /* background-color: #05A6F6; */
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 3%;
+  /* margin: 10px; */
+  padding: 0;
+  color: black;
+  /* text-align: center; */
+}
+.what-title {
+  background-color: #DDDDDD;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 150%;
+  opacity: 0.90;
+  padding-top: 0%;
+  margin-bottom: 0%;
+  margin-top: 15%;
+}
 
-/* body,
-.friends-image {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-} */
+sup {
+  color: #ee5253;
+  font-weight: bolder;
+}
+
+.hidden {
+  display: none;
+}
+
+.radio-buttons-box {
+  background-color: #DDDDDD;
+  font-size: 22px;
+  color: black;
+  height: 50%;
+  width: 35%;
+  padding-left: 3%;
+  margin-top: 0;
+  float: left;
+  opacity: 0.90;
+  display: block;
+  line-height: 225%;
+  display: table-cell;
+  padding-top: 0%;
+  padding-bottom: 5%;
+}
+
+.lets-cook-button {
+  background-color: #0fb9b1;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-weight: bolder;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 35%;
+  border: none;
+  border-radius: 5px;
+  /* display: none; */
+}
+
+/* ~~~~~~~~~~~~~~ MEAL BOX ~~~~~~~~~~~~~~~~ */
+
+.recommend-meal-box {
+  background-color: #DDDDDD;
+  font-size: 24px;
+  color: black;
+  height: 57%;
+  width: 35%;
+  max-height: 58%;
+  max-width: 35%;
+  margin-left: 0%;
+  margin-right: 0%;
+  float: left;
+  opacity: 0.90;
+  display: block;
+  line-height: 225%;
+  padding-left: 0;
+  padding-bottom: 6.3%;
+  display: none;
+
+}
+
+.cookpot-box {
+  display: flex;
+  /* border: 2px solid red; */
+  background-color: #DDDDDD;
+  min-width: 125px;
+  min-height: 125px;
+  margin: 0%;
+  margin-right: 0%;
+  padding-left: 150px;
+  /* display: none; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  padding: 149px;
+  padding-left: 182px;
+  padding-right:182px;
+  opacity: 0.90;
+}
+
+.should-make-title-text {
+  background-color: #DDDDDD;
+  font-size: 20px;
+  font-weight: bolder;
+  font-style: italic;
+  line-height: 150%;
+  opacity: 0.90;
+  padding-top: 25%;
+  margin-bottom: -1%;
+  text-align: center;
+}
+
+.recommended-meal-text {
+  background-color: #DDDDDD;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 150%;
+  opacity: .90;
+  padding-top: 0%;
+  margin-top: -1%;
+  margin-bottom: 3%;
+  text-align: center;
+}
+
+.clear-recommend-button {
+  background-color: #95a5a6;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  color: rgba(225, 225, 225, .9);
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 15%;
+  margin-left: 65%;
+  width: 20%;
+  border: none;
+  border-radius: 5px;
+  bottom: 0px;
+  opacity: .99;
+}
+
+@keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+/* font-family: 'Roboto', sans-serif;
+COLORS
+teal - #0fb9b1;
+frosted white - rgba(225, 225, 225, .9); #CBCBCB
+grey - #95a5a6;
+red - #ee5253
