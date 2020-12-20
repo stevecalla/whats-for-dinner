@@ -32,7 +32,7 @@ function setChoice() {
 function displaySideMainsDessert() {
   event.preventDefault();
   if (setChoice() === "Select Meal Choice!") {
-    setLetsCookStyle();
+    setSelectRadioButtonMessageStyle();
     showRandomRecommendation.innerText = setChoice();
   } else if (selectEntireMealButton.checked) {
     setMainsStyle();
@@ -52,26 +52,32 @@ function randomMainsIndex() {
 function randomDessertIndex() {
   return Math.floor(Math.random() * dessertList.length);
 };
-function setLetsCookStyle() {
-      document.querySelector('.recommended-meal-text').style.fontSize = '40px';
-      document.querySelector('.recommended-meal-text').style.color = 'red';
+function setSelectRadioButtonMessageStyle() {
+  document.querySelector('.recommended-meal-text').style.fontSize = '40px';
+  document.querySelector('.recommended-meal-text').style.color = 'red';
+  document.querySelector('.recommended-meal-text').style.animationName = 'blinker';
+  document.querySelector('.recommended-meal-text').style.animationDuration = '1.5s';
+  document.querySelector('.recommended-meal-text').style.animationTimingFunction = 'linear';
+  document.querySelector('.recommended-meal-text').style.animationIterationCount = 'infinite';
 };
 function setMainsStyle() {
   document.querySelector('.recommended-meal-text').style.fontSize = '24px';
   document.querySelector('.recommended-meal-text').style.color = 'black';
+  document.querySelector('.recommended-meal-text').style.animationName = 'none';
 };
 function setSideMainDessertStyle() {
   document.querySelector('.recommended-meal-text').style.fontSize = '40px';
   document.querySelector('.recommended-meal-text').style.color = 'black';
+  document.querySelector('.recommended-meal-text').style.animationName = 'none';
 };
 function hideCookingPot() {
   document.querySelector('.cookpot-overlay-box').style.display = 'none';
   document.querySelector('.recommend-meal-box').style.display = 'inline';
 };
 function displayCookingPot() {
-    event.preventDefault();
-    document.querySelector('.cookpot-overlay-box').style.display = 'inline';
-    document.querySelector('.recommend-meal-box').style.display = 'none';
+  event.preventDefault();
+  document.querySelector('.cookpot-overlay-box').style.display = 'inline';
+  document.querySelector('.recommend-meal-box').style.display = 'none';
 };
 
 // Add variables here :point_down:👇
