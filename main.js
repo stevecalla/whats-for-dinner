@@ -24,7 +24,8 @@ function setChoice() {
   } else if (selectDessertButton.checked) {
     return `${dessertList[randomDessertIndex()]}!`;
   } else if (selectEntireMealButton.checked) {
-    return `${mainsList[randomMainsIndex()]} with a side of ${sideList[randomSideIndex()]} and ${dessertList[randomDessertIndex()]} for dessert`;
+    return `${mainsList[randomMainsIndex()]} with a side of
+    ${sideList[randomSideIndex()]} and ${dessertList[randomDessertIndex()]} for dessert`;
   } else {
     return "Select Meal Choice!"
   };
@@ -71,12 +72,12 @@ function setSideMainDessertStyle() {
   document.querySelector('.recommended-meal-text').style.animationName = 'none';
 };
 function hideCookingPot() {
-  document.querySelector('.cookpot-overlay-box').style.display = 'none';
+  document.querySelector('.cookpot-box').style.display = 'none';
   document.querySelector('.recommend-meal-box').style.display = 'inline';
 };
 function displayCookingPot() {
   event.preventDefault();
-  document.querySelector('.cookpot-overlay-box').style.display = 'inline';
+  document.querySelector('.cookpot-box').style.display = 'inline';
   document.querySelector('.recommend-meal-box').style.display = 'none';
 };
 
