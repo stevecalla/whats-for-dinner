@@ -106,15 +106,18 @@ sup {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
   color: black;
+  font-weight: bolder;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 8px;
   padding-bottom: 8px;
-  width: 50%;
+  width: 35%;
   border: none;
   border-radius: 5px;
   /* display: none; */
 }
+
+/* ~~~~~~~~~~~~~~ MEAL BOX ~~~~~~~~~~~~~~~~ */
 
 .recommend-meal-box {
   background-color: #DDDDDD;
@@ -125,7 +128,7 @@ sup {
   max-height: 58%;
   max-width: 35%;
   margin-left: 0%;
-  margin-right: 3%;
+  margin-right: 0%;
   float: left;
   opacity: 0.90;
   display: block;
@@ -143,7 +146,7 @@ sup {
   min-width: 125px;
   min-height: 125px;
   margin: 0%;
-  margin-right: 3%;
+  margin-right: 0%;
   padding-left: 150px;
   /* display: none; */
   /* align-items: center; */
@@ -152,7 +155,6 @@ sup {
   padding-left: 182px;
   padding-right:182px;
   opacity: 0.90;
-
 }
 
 .should-make-title-text {
@@ -183,6 +185,7 @@ sup {
   background-color: #95a5a6;
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
   color: rgba(225, 225, 225, .9);
   padding-left: 0%;
   padding-right: 0%;
@@ -190,7 +193,7 @@ sup {
   padding-bottom: 8px;
   margin-top: 15%;
   margin-left: 65%;
-  width: 30%;
+  width: 20%;
   border: none;
   border-radius: 5px;
   bottom: 0px;
