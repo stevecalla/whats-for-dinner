@@ -92,7 +92,6 @@ var sideList = [
   "Garlic Butter Mushrooms",
   "Hush Puppies"
 ];
-
 var mainsList = [
   "Spaghetti and Meatballs",
   "Pineapple Chicken",
@@ -107,7 +106,6 @@ var mainsList = [
   "Sheet Pan Fajitas",
   "Margarita Pizza"
 ];
-
 var dessertList = [
   "Apple Pie",
   "Lemon Meringue Pie",

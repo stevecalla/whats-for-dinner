@@ -21,7 +21,6 @@ body {
   display: flex;
   justify-content: flex-end;
   padding: 10px 0;
-
   position: relative;
 }
 
@@ -47,7 +46,7 @@ body {
   border-radius: 5px;
 }
 
-.controls > button:hover {
+.controls>button:hover {
   background: #e07999;
   font-family: 'Roboto', sans-serif;
   color: white;
@@ -67,7 +66,6 @@ body {
 sup {
   color: #ee5253;
   font-weight: bolder;
-
 }
 
 .radio-buttons-box {
@@ -105,7 +103,6 @@ sup {
 }
 
 /* ~~~~~~~~~~~~~~ COOKPOT BOX ~~~~~~~~~~~~~~~~ */
-
 .cookpot-overlay-box {
   background-color: #DDDDDD;
   font-size: 24px;
@@ -120,7 +117,6 @@ sup {
   object-fit: scale-down;
   padding-left: 0;
 }
-
 
 .recommend-meal-box {
   background-color: #DDDDDD;
@@ -182,9 +178,15 @@ sup {
 }
 
 @keyframes blinker {
- 0% { opacity: 1.0; }
- 50% { opacity: 0.0; }
- 100% { opacity: 1.0; }
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
 }
 
 /* font-family: 'Roboto', sans-serif;
