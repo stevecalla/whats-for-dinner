@@ -1,10 +1,3 @@
-/* font-family: 'Roboto', sans-serif;
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9); #CBCBCB
-grey - #95a5a6;
-red - #ee5253
-*/
 *,
 *:before,
 :after {
@@ -21,6 +14,46 @@ body {
   margin: 0;
 }
 
+/* ~~~~~~~~~~~~~~ PAGE HEADER ~~~~~~~~~~~~~~~~ */
+.page-header {
+  background: #0fb9b1;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+
+  position: relative;
+}
+
+.page-header-title {
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  margin: 10px;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0px;
+  left: -5px;
+}
+
+.add-recipe-button {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  margin: 10px;
+  padding: 4px 8px;
+  /* position: relative; */
+  border: none;
+  border-radius: 5px;
+}
+
+.controls > button:hover {
+  background: #e07999;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+/* ~~~~~~~~~~~~~~ RADIO BUTTON BOX ~~~~~~~~~~~~~~~~ */
 .what-title {
   background-color: #DDDDDD;
   font-size: 32px;
@@ -71,7 +104,9 @@ sup {
   /* display: none; */
 }
 
-.img-overlay-box {
+/* ~~~~~~~~~~~~~~ COOKPOT BOX ~~~~~~~~~~~~~~~~ */
+
+.cookpot-overlay-box {
   background-color: #DDDDDD;
   font-size: 24px;
   color: black;
@@ -84,10 +119,10 @@ sup {
   opacity: .90;
   object-fit: scale-down;
   padding-left: 0;
-  /* display: none; */
 }
 
-.img-overlay-box2 {
+
+.recommend-meal-box {
   background-color: #DDDDDD;
   font-size: 24px;
   color: black;
@@ -104,7 +139,7 @@ sup {
   display: none;
 }
 
-.title-text {
+.should-make-title-text {
   background-color: #DDDDDD;
   font-size: 20px;
   font-weight: bolder;
@@ -116,7 +151,7 @@ sup {
   text-align: center;
 }
 
-.recommended-meal {
+.recommended-meal-text {
   background-color: #DDDDDD;
   font-size: 40px;
   font-weight: bold;
@@ -144,72 +179,12 @@ sup {
   border-radius: 5px;
   bottom: 0px;
   opacity: .99;
-  /* display: none; */
 }
 
-
-/* .img-overlay-box2 {
-  background-color: rgba(225, 225, 225, .9);
-  font-size: 24px;
-  text-align: center;
-  color: black;
-  height: 50%;
-  width: 35%;
-  margin-top: 50px;
-  margin-left: 0%;
-  margin-right: 3%;
-  float: left;
-  opacity: .95;
-  object-fit: scale-down;
-  padding-left: 0;
-} */
-
-
-
-/* ~~~~~~~~~~~~~~ PAGE HEADER ~~~~~~~~~~~~~~~~ */
-.page-header {
-  background: #0fb9b1;
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px 0;
-
-  position: relative;
-}
-
-.page-header-title {
-  font-size: 24px;
-  font-family: 'Roboto', sans-serif;
-  color: black;
-  margin: 10px;
-  padding: 10px 20px;
-  position: absolute;
-  top: 0px;
-  left: -5px;
-}
-
-.add-recipe-button {
-  font-size: 16px;
-  font-family: 'Roboto', sans-serif;
-  color: black;
-  margin: 10px;
-  padding: 4px 8px;
-  /* position: relative; */
-  border: none;
-  border-radius: 5px;
-}
-
-.controls > button:hover {
-  background: #e07999;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-}
-
-
-/* body,
-.friends-image {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-} */
+/* font-family: 'Roboto', sans-serif;
+COLORS
+teal - #0fb9b1;
+frosted white - rgba(225, 225, 225, .9); #CBCBCB
+grey - #95a5a6;
+red - #ee5253
+*/
