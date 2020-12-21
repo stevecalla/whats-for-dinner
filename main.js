@@ -24,8 +24,9 @@ function setChoice() {
   } else if (selectDessertButton.checked) {
     return `${dessertList[randomDessertIndex()]}!`;
   } else if (selectEntireMealButton.checked) {
-    return `${mainsList[randomMainsIndex()]} with a side of
-    ${sideList[randomSideIndex()]} and ${dessertList[randomDessertIndex()]} for dessert`;
+    return `${mainsList[randomMainsIndex()]} with a
+    side of ${sideList[randomSideIndex()]} and
+    ${dessertList[randomDessertIndex()]} for dessert`;
   } else {
     return "Select Meal Choice!"
   };
