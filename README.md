@@ -1,115 +1,71 @@
-## Overview
+## Overview - What's For Dinner README.md
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
+What’s for dinner? The ultimate question. The What's for dinner app allows a user to randomly generate recipe ideas for a side, main course, dessert or the entire email.
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+The site is accessible at [here](https://stevecalla.github.io/romcom/). All the project requirements can be found [here](https://frontend.turing.io/projects/module-1/dinner.html).
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
+## Website Preview
+![Small GIF (400x192)](https://user-images.githubusercontent.com/72281855/102734411-fb492a00-42fc-11eb-8ba5-35b0dc610f6d.gif)
 
-## Learning Goals
+## Functionality
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
+* Current: User can generate a random side, main, dessert course or an entire 3 course meal.
+  * Build Out Comp
+  * Entire Meal Functionality
+  * Error Handling and Clear Button
+* Under Development: TBD
+* Known Issues/Bugs: TBD
+  * Issue #1 - sizing of left panel not identical creating shifting effect.
+  * Issue #2 - not pixel perfect
+  * Issue #3 - refactor using innerhtml to reduce box replace method to make pot disappear
+  * Issue #4 - refactor HTML and CSS to reduce duplicate elements/properties
+  * Issue #5 - page is not responsive
+  * Issue #6 -
+* Future Enhancements:
+  * Login Page
+  * User can favorite a recipe
+  * User can delete a recipe
+  * User never sees a repeated recipe
+  * All recipes interface
+  * Intermediate CSS
+  * Local Storage
 
-## Setup
+## Iterations
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+ITERATION 0: Build Out Comp
+<img width="1367" alt="1 Home Page Screenshot" src="https://user-images.githubusercontent.com/72281855/102733884-ace75b80-42fb-11eb-9972-7bfa6faf3115.png">
 
-## Workflow
-Make sure you're utilizing git best practices and commiting frequently. 
+ITERATION 1: MVP - Generate random side, main or dessert course
+* When a user selects a dish option, then clicks the “Let’s Cook!” button...
+* ...the user sees a random dish from the list of possible dishes for that category...
+* ...when the dish name appears, the cookpot icon disappears
+<img width="1367" alt="2 Dinner Screenshot" src="https://user-images.githubusercontent.com/72281855/102733889-b1ac0f80-42fb-11eb-8004-f96514729109.png">
 
-### Iteration 0: Build Out Comp
-- Images are below
-- An assets directory is provided in the repo, and colors are provided in the CSS file.
+ITERATION 2: Entire Meal Functionality
+* When the user selects the “Entire Meal” option, then clicks the “Let’s Cook!” button...
+* ...the user sees a message with a side, main and dessert option from the lists of possible dishes for all categories
+* ... When the meal items appear, the cookpot icon disappears
+<img width="1371" alt="3 Entire Meal Screenshot" src="https://user-images.githubusercontent.com/72281855/102733895-b5d82d00-42fb-11eb-9760-74b064597689.png">
 
-### Iteration 1: Add Random Side, Main and Dessert Functionality
+ITERATION 3: Error Handling and Clear Button
+* Clear Button: The user can click a clear button, which clears the page of any message. User should only be able to click the clear button if a food is visible. When the clear button is clicked and the food is removed, the image of the cookpot should re-appear.
+* Let's Cook Button: If the user selects the "Let's Cook" button for a recipe prior to selecting a course (side, main, dessert, entire meal) radio button, the cooking pot will be replaced by a message to select a course. (Note: I considered the following options... disable or hide the "Let's Cook" buttor or display a message. I oped for the later).
+<img width="1365" alt="4 Error Message Screenshot" src="https://user-images.githubusercontent.com/72281855/102733906-ba044a80-42fb-11eb-9622-c8b89e660192.png">
 
-- When a user selects a dish option (don't worry about "Entire Meal" yet) and then clicks the "Let's Cook!" button, the user sees a random dish from the list of possible dishes for that category
-- When the dish name appears, the cookpot icon disappears
+## Built With
 
-### Iteration 2: Entire Meal Funcitonality
+1. HTML
+2. CSS
+3. JavaScript  
+4. GitHub (website hosting and source code management)
 
-- When the user selects the "Entire Meal" option and then clicks the "Let's Cook!" button, the user sees a message with a side, main and dessert option from the lists of possible dishes for all categories
-- When the meal items appear, the cookpot icon disappears
+## Contributors
 
-### Iteration 3: Error Handling and Clear Button
+* Steve Calla
+* Amazingly Available for Questions & Guidance: Rachel Buchta.
 
-- The user can click a clear button, which clears the page of any message. User should only be able to click the clear button if a food is visible. When the clear button is clicked and the food is removed, the image of the cookpot should re-appear.
-- User should not be able to click the "Let's Cook" button for a recipe unless they have selected an option.
-
-_Note: You can disable these buttons, hide them, or display a message to the user for error handling. The choice is yours!_
-
-### Iteration 4: Adding a Recipe
-
-- The user can click an "Add a Recipe" button, which will display a form to add a new recipe at the bottom of the page
-- The user can add a type and a name, click the "Add New" recipe and that recipe will be added to the appropriate list
-- When a new recipe is added, that recipe should automatically display instead of the cookpot icon
-
-_NOTE: None of this needs to persist on page refresh_
-
-### Iteration 5: BONUS ROUND (Ideas for Extensions)
-
-_NOTE: This round is not required, and you should absolutely not be working on this unless your UI is solid and you are 100% sure that all of Iterations 1-4 are fully functional and bug free._
-
-- Add a loading animation when a user clicks the "Let's Cook" button to simulate searching for a recipe. Hint - You will need to use CSS Keyframes, and a Javascript timeout function for this.
-- When a user tries to add to a recipe type that does not exist, we see an error message, OR the new category gets added!
-- Add the ability to delete a recipe (ie: when a recipe shows up, show a button that says "I don't like this recipe" (or something similar), and remove it from the array so that it will not show up any more (does not need to persist on page load). Make sure to alert the user in some way that the recipe has been removed. 
-- Make sure that the same recipe (single item or entire meal) won't be generated more than once. Make sure to add error handling for when a user "runs out of recipes." (does not need to persist on page load)
-- Additional functionality for entire meal -> add the ability to swap out meal items. Note: Make sure your design for this matches the theme
-- CYOA Extension! Make sure you run your idea by instructors
-<hr/>
-
-### Food Lists (Feel free to use your own instead!)
-
-#### Sides
-
-Miso Glazed Carrots  
-Coleslaw  
-Garden Salad  
-Crispy Potatoes  
-Sweet Potato Tots  
-Coconut Rice  
-Caeser Salad  
-Shrimp Summer Rolls  
-Garlic Butter Mushrooms  
-Hush Puppies  
-
-#### Mains
-Spaghetti and Meatballs  
-Pineapple Chicken  
-Shakshuka  
-Thai Yellow Curry  
-Bibimbap  
-Chicken Parmesean  
-Butternut Squash Soup  
-BBQ Chicken Burgers  
-Ramen  
-Empanadas  
-Chicken Fried Rice  
-Sheet Pan Fajitas  
-Margarita Pizza  
-
-#### Desserts
-Apple Pie  
-Lemon Meringue Pie  
-Black Forest Cake  
-Banana Bread  
-Peach Cobbler  
-Cheesecake  
-Funfetti Cake  
-Baklava  
-Flan  
-Macarons  
-Macaroons  
-Chocolate Cupcakes  
-Pavlova  
-Pumpkin Pie  
-Key Lime Pie  
-Tart Tatin  
-Croissants  
-Eclairs  
-
+## Various Links
+* Project Description: https://frontend.turing.io/projects/module-1/dinner.html
+* Project Original GitHub Repo: https://github.com/turingschool-examples/whats-for-dinner
+* Team GitHub Repo: https://github.com/stevecalla/whats-for-dinner
+* GitHub Hosted URL: https://stevecalla.github.io/whats-for-dinner/
