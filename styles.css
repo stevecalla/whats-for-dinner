@@ -53,18 +53,30 @@ body {
 }
 
 /* ~~~~~~~~~~~~~~ RADIO BUTTON BOX ~~~~~~~~~~~~~~~~ */
-.wrapper {
+/* .wrapper {
   display: flex;
   /* background-color: #05A6F6; */
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 3%;
+  /* align-items: center; */
+  /* justify-content: space-evenly; */
+  /* margin-top: 3%; */
   /* margin: 10px; */
-  padding: 0;
-  color: black;
-  /* text-align: center; */
+  /* padding: 0; */
+  /* color: black; */
+  /* text-align: center; */ 
+/* } */
+
+.wrapper {
+    display: flex;
+    /* background-color: #05A6F6; */
+    align-items: flex-start;
+    justify-content: space-evenly;
+    color: black;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
 }
-.what-title {
+
+/* .what-title {
   background-color: #DDDDDD;
   font-size: 28px;
   font-weight: bold;
@@ -73,18 +85,16 @@ body {
   padding-top: 0%;
   margin-bottom: 0%;
   margin-top: 15%;
-}
+} */
 
-sup {
-  color: #ee5253;
-  font-weight: bolder;
-}
+
+
 
 .hidden {
   display: none;
 }
 
-.radio-buttons-box {
+/* .radio-buttons-box {
   background-color: #DDDDDD;
   font-size: 22px;
   color: black;
@@ -99,7 +109,38 @@ sup {
   display: table-cell;
   padding-top: 0%;
   padding-bottom: 5%;
+} */
+
+.radio-buttons-box {
+    background-color: #DDDDDD;
+    font-size: 22px;
+    color: black;
+    height: 350px;
+    width: 35%;
+    opacity: 0.90;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 15px;
+  }
+
+.what-title {
+    background-color: #DDDDDD;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 0.90;
+    margin: 0;
 }
+
+.radio-buttons {
+    margin: 10px 0;
+};
+
+sup {
+  color: #ee5253;
+  font-weight: bolder;
+};
 
 .lets-cook-button {
   background-color: #0fb9b1;
@@ -117,9 +158,10 @@ sup {
   /* display: none; */
 }
 
+
 /* ~~~~~~~~~~~~~~ MEAL BOX ~~~~~~~~~~~~~~~~ */
 
-.recommend-meal-box {
+/* .recommend-meal-box {
   background-color: #DDDDDD;
   font-size: 24px;
   color: black;
@@ -135,27 +177,36 @@ sup {
   line-height: 225%;
   padding-left: 0;
   padding-bottom: 6.3%;
-  display: none;
+  /* display: none; */
+/* } */
 
-}
+.recommend-meal-box {
+    background-color: #DDDDDD;
+    font-size: 24px;
+    color: black;
+    height: 350px;
+    width: 35%;
+    opacity: 0.90;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
 
 .cookpot-box {
   display: flex;
   /* border: 2px solid red; */
   background-color: #DDDDDD;
-  min-width: 125px;
-  min-height: 125px;
-  margin: 0%;
-  margin-right: 0%;
-  padding-left: 150px;
-  /* display: none; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  padding: 149px;
-  padding-left: 182px;
-  padding-right:182px;
   opacity: 0.90;
+  height: 350px;
+  width: 35%;
+  justify-content: center;
+  align-items: center;
 }
+
+.cookpot-image {
+    height: 50px;
+    width: 50px;
+  }
 
 .should-make-title-text {
   background-color: #DDDDDD;

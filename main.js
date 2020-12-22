@@ -74,11 +74,11 @@ function setSideMainDessertStyle() {
 };
 function hideCookingPot() {
   document.querySelector('.cookpot-box').style.display = 'none';
-  document.querySelector('.recommend-meal-box').style.display = 'inline';
+  document.querySelector('.recommend-meal-box').style.display = 'flex';
 };
 function displayCookingPot() {
   event.preventDefault();
-  document.querySelector('.cookpot-box').style.display = 'inline';
+  document.querySelector('.cookpot-box').style.display = 'flex';
   document.querySelector('.recommend-meal-box').style.display = 'none';
 };
 
