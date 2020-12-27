@@ -112,27 +112,29 @@ label {
 }
 
 .cookpot-image {
+    display: flex;
     height: 150px;
     width: 150px;
   }
 
+.meal-box{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 80%;
+  text-align: center;
+}
+
 .should-make-title-text {
-  display: flex;
   margin-top: 30px;
   background-color: #DDDDDD;
   font-size: 20px;
   font-weight: bolder;
   font-style: italic;
   opacity: 0.90;
-}
-
-.meal-box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 120px;
-  width: 80%;
-  text-align: center;
+  height: 40px;
 }
 
 .select-meal-text {
