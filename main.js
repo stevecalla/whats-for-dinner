@@ -67,17 +67,6 @@ function randomDessertIndex() {
   return Math.floor(Math.random() * dessertList.length);
 };
 
-//refactor clear button?
-/* <div class="button"> 
-<button class="clear-recommend-button">CLEAR</button> 
-</div> */
-
-// var clearButton = document.querySelector('.clear-recommend-button');
-// clearButton.addEventListener('click', clickClear);
-// function clickClear() {
-//   console.log('yes');
-// }
-
 // Add variables here :point_down:👇
 var sideList = [
   "Coleslaw",
