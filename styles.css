@@ -106,19 +106,8 @@ label {
   opacity: 0.90;
   height: 425px;
   width: 35%;
-  justify-content: center;
-  align-items: center;
-}
-
-.recommend-meal-box {
-  background-color: #DDDDDD;
-  font-size: 24px;
-  color: black;
-  height: 425px;
-  width: 35%;
-  opacity: 0.90;
-  display: none;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -147,6 +136,24 @@ label {
   margin-bottom: 3%;
   text-align: center;
   height: 40px;
+}
+
+.select-meal-text {
+  background-color: #DDDDDD;
+  font-size: 40px;
+  color: red;
+  height: 40px;
+  animation-name: blinker;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.entire-meal-text {
+  background-color: #DDDDDD;
+  font-size: 24px;
+  height: 40px;
+  text-align: center;
 }
 
 .clear-recommend-button {

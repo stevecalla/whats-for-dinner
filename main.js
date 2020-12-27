@@ -6,6 +6,7 @@ var selectDessertButton = document.querySelector('#selectDessert');
 var selectEntireMealButton = document.querySelector('#selectEntireMeal');
 var showRandomRecommendation = document.querySelector('.recommended-meal-text');
 var clearRecommendButton = document.querySelector('.clear-recommend-button');
+var cookPotBox = document.querySelector('.cookpot-box');
 
 // Add your event listeners here :point_👇
 letsCookButton.addEventListener('click', displaySideMainsDessert);
@@ -13,7 +14,6 @@ selectSideButton.addEventListener('click', setChoice);
 selectMainsButton.addEventListener('click', setChoice);
 selectDessertButton.addEventListener('click', setChoice);
 selectEntireMealButton.addEventListener('click', setChoice);
-clearRecommendButton.addEventListener('click', displayCookingPot);
 
 // Create your event handlers and other functions here :point_down:👇
 function setChoice() {
@@ -33,17 +33,22 @@ function setChoice() {
 };
 function displaySideMainsDessert() {
   event.preventDefault();
-  if (setChoice() === "Select Meal Choice!") {
-    setSelectRadioButtonMessageStyle();
-    showRandomRecommendation.innerText = setChoice();
+   if (setChoice() === "Select Meal Choice!") {
+      cookPotBox.innerHTML = `
+        <p class="should-make-title-text">You should make:</p>
+        <p class="select-meal-text">${setChoice()}</p>
+        <button class="clear-recommend-button">CLEAR</button> `; 
   } else if (selectEntireMealButton.checked) {
-    setMainsStyle();
-    showRandomRecommendation.innerText = setChoice();
+      cookPotBox.innerHTML = `
+        <p class="should-make-title-text">You should make:</p>
+        <p class="entire-meal-text">${setChoice()}</p>
+        <button class="clear-recommend-button">CLEAR</button> `; 
   } else {
-    setSideMainDessertStyle();
-    showRandomRecommendation.innerText = setChoice();
-  };
-  hideCookingPot();
+      cookPotBox.innerHTML = `
+        <p class="should-make-title-text">You should make:</p>
+        <p class="recommended-meal-text">${setChoice()}</p>
+        <button class="clear-recommend-button">CLEAR</button> `; 
+  }; 
 };
 function randomSideIndex() {
   return Math.floor(Math.random() * sideList.length);
@@ -53,33 +58,6 @@ function randomMainsIndex() {
 };
 function randomDessertIndex() {
   return Math.floor(Math.random() * dessertList.length);
-};
-function setSelectRadioButtonMessageStyle() {
-  document.querySelector('.recommended-meal-text').style.fontSize = '40px';
-  document.querySelector('.recommended-meal-text').style.color = 'red';
-  document.querySelector('.recommended-meal-text').style.animationName = 'blinker';
-  document.querySelector('.recommended-meal-text').style.animationDuration = '1.5s';
-  document.querySelector('.recommended-meal-text').style.animationTimingFunction = 'linear';
-  document.querySelector('.recommended-meal-text').style.animationIterationCount = 'infinite';
-};
-function setMainsStyle() {
-  document.querySelector('.recommended-meal-text').style.fontSize = '24px';
-  document.querySelector('.recommended-meal-text').style.color = 'black';
-  document.querySelector('.recommended-meal-text').style.animationName = 'none';
-};
-function setSideMainDessertStyle() {
-  document.querySelector('.recommended-meal-text').style.fontSize = '40px';
-  document.querySelector('.recommended-meal-text').style.color = 'black';
-  document.querySelector('.recommended-meal-text').style.animationName = 'none';
-};
-function hideCookingPot() {
-  document.querySelector('.cookpot-box').style.display = 'none';
-  document.querySelector('.recommend-meal-box').style.display = 'flex';
-};
-function displayCookingPot() {
-  event.preventDefault();
-  document.querySelector('.cookpot-box').style.display = 'flex';
-  document.querySelector('.recommend-meal-box').style.display = 'none';
 };
 
 // Add variables here :point_down:👇
