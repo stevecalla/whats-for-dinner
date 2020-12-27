@@ -6,6 +6,7 @@ var selectDessertButton = document.querySelector('#selectDessert');
 var selectEntireMealButton = document.querySelector('#selectEntireMeal');
 var showRandomRecommendation = document.querySelector('.recommended-meal-text');
 var cookPotBox = document.querySelector('.cookpot-box');
+var clearButton = document.querySelector('.clear-recommend-button');
 
 // Add your event listeners here :point_👇
 letsCookButton.addEventListener('click', displaySideMainsDessert);
@@ -13,6 +14,7 @@ selectSideButton.addEventListener('click', setChoice);
 selectMainsButton.addEventListener('click', setChoice);
 selectDessertButton.addEventListener('click', setChoice);
 selectEntireMealButton.addEventListener('click', setChoice);
+clearButton.addEventListener('click', clickClear);
 
 // Create your event handlers and other functions here :point_down:👇
 function setChoice() {
@@ -31,31 +33,28 @@ function setChoice() {
   };
 };
 function displaySideMainsDessert() {
-   if (setChoice() === "Select Meal Choice!") {
-      cookPotBox.innerHTML = 
-        `
-        <p class="should-make-title-text">You should make:</p>
-        <div class="meal-box">
-          <p class="select-meal-text">${setChoice()}</p>
-        </div>
-        `;
-  } else if (selectEntireMealButton.checked) {
-      cookPotBox.innerHTML = 
-        `
-        <p class="should-make-title-text">You should make:</p>
-        <div class="meal-box">
-          <p class="entire-meal-text">${setChoice()}</p>
-        </div>
-        `; 
-  } else {
-      cookPotBox.innerHTML = 
-        `
-        <p class="should-make-title-text">You should make:</p>
-        <div class="meal-box">
-          <p class="recommended-meal-text">${setChoice()}</p>
-        </div>
-        `; 
-  }; 
+  if (setChoice() === "Select Meal Choice!") {  
+     document.querySelector('.cookpot-image').style.display = 'none';
+     document.querySelector('.meal-box').style.display = 'flex';
+     showRandomRecommendation.innerText = setChoice();
+     showRandomRecommendation.classList.add('select-meal-text');
+     showRandomRecommendation.classList.remove('recommended-meal-text');
+     showRandomRecommendation.classList.remove('entire-meal-text');
+ } else if (selectEntireMealButton.checked) {  
+     document.querySelector('.cookpot-image').style.display = 'none';
+     document.querySelector('.meal-box').style.display = 'flex';
+     showRandomRecommendation.innerText = setChoice();
+     showRandomRecommendation.classList.remove('select-meal-text');
+     showRandomRecommendation.classList.remove('recommended-meal-text');
+     showRandomRecommendation.classList.add('entire-meal-text');
+ } else {  
+     document.querySelector('.cookpot-image').style.display = 'none';
+     document.querySelector('.meal-box').style.display = 'flex';
+     showRandomRecommendation.innerText = setChoice();
+     showRandomRecommendation.classList.remove('select-meal-text');
+     showRandomRecommendation.classList.remove('entire-meal-text');
+     showRandomRecommendation.classList.add('recommended-meal-text');
+ }; 
 };
 function randomSideIndex() {
   return Math.floor(Math.random() * sideList.length);
@@ -66,17 +65,14 @@ function randomMainsIndex() {
 function randomDessertIndex() {
   return Math.floor(Math.random() * dessertList.length);
 };
-
-//refactor clear button?
-/* <div class="button"> 
-<button class="clear-recommend-button">CLEAR</button> 
-</div> */
-
-// var clearButton = document.querySelector('.clear-recommend-button');
-// clearButton.addEventListener('click', clickClear);
-// function clickClear() {
-//   console.log('yes');
-// }
+function clickClear() {
+  document.querySelector('.cookpot-image').style.display = 'flex';
+  document.querySelector('.meal-box').style.display = 'none';  
+  selectSideButton.checked = false;
+  selectMainsButton.checked = false;
+  selectDessertButton.checked = false;
+  selectEntireMealButton.checked = false;
+}
 
 // Add variables here :point_down:👇
 var sideList = [
