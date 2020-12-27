@@ -1,14 +1,13 @@
 *,
-*:before,
+/* *:before, */
 :after {
-  /* box-sizing: border-box; */
-  font-family: 'Roboto', sans-serif;
 }
 
 /* ~~~~~~~~~~~~~~ HOME PAGE IMAGE ~~~~~~~~~~~~~~~~ */
 body {
   background-image: url("./assets/burger-friends.jpg");
   background-size: cover;
+  font-family: 'Roboto', sans-serif;  
   height: 100%;
   width: 100%;
   margin: 0;
@@ -17,17 +16,13 @@ body {
 /* ~~~~~~~~~~~~~~ PAGE HEADER ~~~~~~~~~~~~~~~~ */
 .page-header {
   background: #0fb9b1;
-  font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: flex-end;
   padding: 10px 0;
-  position: relative;
 }
 
 .page-header-title {
   font-size: 24px;
-  font-family: 'Roboto', sans-serif;
-  color: black;
   margin: 10px;
   padding: 10px 20px;
   position: absolute;
@@ -37,136 +32,108 @@ body {
 
 .add-recipe-button {
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
-  color: black;
   margin: 10px;
   padding: 4px 8px;
-  /* position: relative; */
   border: none;
   border-radius: 5px;
-}
-
-.controls>button:hover {
-  background: #e07999;
-  font-family: 'Roboto', sans-serif;
-  color: white;
 }
 
 /* ~~~~~~~~~~~~~~ RADIO BUTTON BOX ~~~~~~~~~~~~~~~~ */
 .wrapper {
-  display: flex;
-  /* background-color: #05A6F6; */
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 3%;
-  /* margin: 10px; */
-  padding: 0;
-  color: black;
-  /* text-align: center; */
-}
-.what-title {
-  background-color: #DDDDDD;
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 150%;
-  opacity: 0.90;
-  padding-top: 0%;
-  margin-bottom: 0%;
-  margin-top: 15%;
-}
-
-sup {
-  color: #ee5253;
-  font-weight: bolder;
-}
-
-.hidden {
-  display: none;
+    display: flex;
+    /* background-color: #05A6F6; */
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
 }
 
 .radio-buttons-box {
-  background-color: #DDDDDD;
-  font-size: 22px;
-  color: black;
-  height: 50%;
-  width: 35%;
-  padding-left: 3%;
-  margin-top: 0;
-  float: left;
-  opacity: 0.90;
-  display: block;
-  line-height: 225%;
-  display: table-cell;
-  padding-top: 0%;
-  padding-bottom: 5%;
+    background-color: #DDDDDD;
+    font-size: 22px;
+    color: black;
+    height: 425px;
+    width: 35%;
+    opacity: 0.90;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding-left: 50px;
+  }
+
+.what-title {
+    background-color: #DDDDDD;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 75px;
+    margin-bottom: 16px;
+    opacity: 0.90;
+}
+
+sup {
+  color: #ee5556;
+  font-weight: boulder;
+};
+
+.radio-buttons {
+  line-height: 200%;
+}
+
+label {
+  line-height: 200%;
+  padding-bottom: 50px;
 }
 
 .lets-cook-button {
   background-color: #0fb9b1;
+  display: flex;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
   color: black;
-  font-weight: bolder;
-  padding-left: 5%;
-  padding-right: 5%;
   padding-top: 8px;
   padding-bottom: 8px;
-  width: 35%;
+  justify-content: center;
+  width: 45%;
   border: none;
   border-radius: 5px;
-  /* display: none; */
 }
 
 /* ~~~~~~~~~~~~~~ MEAL BOX ~~~~~~~~~~~~~~~~ */
+
+.cookpot-box {
+  display: flex;
+  background-color: #DDDDDD;
+  opacity: 0.90;
+  height: 425px;
+  width: 35%;
+  justify-content: center;
+  align-items: center;
+}
 
 .recommend-meal-box {
   background-color: #DDDDDD;
   font-size: 24px;
   color: black;
-  height: 57%;
+  height: 425px;
   width: 35%;
-  max-height: 58%;
-  max-width: 35%;
-  margin-left: 0%;
-  margin-right: 0%;
-  float: left;
   opacity: 0.90;
-  display: block;
-  line-height: 225%;
-  padding-left: 0;
-  padding-bottom: 6.3%;
   display: none;
-
+  flex-direction: column;
+  align-items: center;
 }
 
-.cookpot-box {
-  display: flex;
-  /* border: 2px solid red; */
-  background-color: #DDDDDD;
-  min-width: 125px;
-  min-height: 125px;
-  margin: 0%;
-  margin-right: 0%;
-  padding-left: 150px;
-  /* display: none; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  padding: 149px;
-  padding-left: 182px;
-  padding-right:182px;
-  opacity: 0.90;
-}
+.cookpot-image {
+    height: 150px;
+    width: 150px;
+  }
 
 .should-make-title-text {
   background-color: #DDDDDD;
   font-size: 20px;
   font-weight: bolder;
   font-style: italic;
-  line-height: 150%;
   opacity: 0.90;
   padding-top: 25%;
-  margin-bottom: -1%;
-  text-align: center;
 }
 
 .recommended-meal-text {
@@ -179,25 +146,28 @@ sup {
   margin-top: -1%;
   margin-bottom: 3%;
   text-align: center;
+  height: 40px;
 }
 
 .clear-recommend-button {
   background-color: #95a5a6;
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
   font-weight: bolder;
   color: rgba(225, 225, 225, .9);
   padding-left: 0%;
   padding-right: 0%;
   padding-top: 8px;
   padding-bottom: 8px;
-  margin-top: 15%;
+  margin-top: 25%;
+  font-family: 'Roboto', sans-serif;  
   margin-left: 65%;
   width: 20%;
   border: none;
   border-radius: 5px;
   bottom: 0px;
   opacity: .99;
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes blinker {
